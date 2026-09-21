@@ -1,0 +1,52 @@
+# Prior art — Pose-Resolved EM Scanner / Rover
+
+This comparison supports the accompanying [project description](README.md). It distinguishes earlier disclosures and demonstrations from the capabilities proposed for this project. An identical project title is not required for a technically relevant overlap, and failure to locate an identical complete system is not evidence of novelty.
+
+## Closest scientific work
+
+| Source | Relevant established work | Limit of the comparison |
+|---|---|---|
+| [Liao & Carin, 2004](https://scholars.duke.edu/publication/685904), DOI 10.1109/TPAMI.2004.38 | Adaptive selection of EMI sensor position and operating frequency for buried targets; a robot carrier is explicitly considered | Numerical examples; not validation of continuously moving, independently tracked TX/RX |
+| [Benavides & Everett, 2007](https://www.sciencedirect.com/science/article/abs/pii/S0926985106000991), DOI 10.1016/j.jappgeo.2006.06.006 | Nonlinear EMI inversion associates each datum with RX location/orientation, TX location/current and time gates; synthetic and buried-target field examples | A restricted target model and different implementation; nevertheless, actual per-datum geometry in inversion is prior art |
+| [Feldkamp & Quirk, 2017](https://www.tayoscorp.com/static/OpticallyTrackedMIT-62fab7f8c8dbe4c4f2e6b28bf4decdf7.pdf), DOI 10.1117/1.JMI.4.2.023504 | Optically tracked free scanning with a single induction coil, synchronized response and pose, and three-dimensional reconstruction of laboratory phantoms | Inductive-loss measurements and biologically relevant conductivities; not arbitrary metallic targets in soil |
+| [Song, Pasion, Lhomme & Oldenburg, 2016](https://gif.eos.ubc.ca/sites/default/files/sdevriese/files/5856083.pdf), DOI 10.1155/2016/5856083 | Sequential EMI experiment design updates a model and selects subsequent sensor placement through an information-gain criterion; synthetic and field tests | Does not establish the complete proposed hardware, but covers the general adaptive measurement-selection principle |
+| [Smith & Morrison, 2005](https://www.osti.gov/servlets/purl/842565), DOI 10.1109/TGRS.2005.846869 | Optimization of receiver/transmitter configurations for equivalent dipole polarizability and location estimation, including positioning-error sensitivity | Configuration design under stated models, not a performance prediction for this project |
+| [SERDP MM-1310](https://serdp-estcp.mil/projects/details/fc7d5880-1201-4eca-b283-662fb8c2b7c7), completed 2006 | Sensor-orientation effects, measured motion and orientation in EMI forward and inverse modelling | Different research objective; it cannot be characterized as necessarily discarding all useful angular information |
+| [Tantum, Yu & Collins, 2008](https://scholars.duke.edu/publication/711401), DOI 10.1109/LGRS.2007.912088 | Bayesian treatment of uncertain sensor positions in EMI parameter estimation | The reported results are simulation results |
+| [Gartman & Chalupczak, 2021](https://arxiv.org/abs/2109.04074), DOI 10.1063/5.0054263; [2022 follow-up](https://www.mdpi.com/2076-3417/12/16/8219) | Laboratory material characterization using angular, frequency and spatial dependence of inductive response | Controlled samples and measurement geometry; no universal identification of unknown buried-object composition follows |
+| [Wilson, Ledger & Lionheart, 2022](https://arxiv.org/abs/2110.06624), DOI 10.1002/nme.6927 | Object classification using computed spectral magnetic-polarizability-tensor signatures | Modelled dictionaries and specified classes; performance must be validated on the actual task |
+
+Additional relevant work includes dynamic-data processing in [Grzegorczyk & Barrowes, 2013](https://doi.org/10.1109/TGRS.2012.2222032), moving-reference-frame EMI characterization in [Ambrus, Vasic & Bilas, 2017](https://doi.org/10.1117/12.2262438), and rotatable excitation in [Yu et al., 1998](https://research.manchester.ac.uk/en/publications/electromagnetic-inductance-tomography-emt-sensor-electronics-and-/). These are distinct contributions; they are not evidence that this project has demonstrated dynamic reconstruction or a particular processing speed.
+
+[SERDP MM-1447](https://serdp-estcp.mil/projects/details/37ad83db-dbe5-4878-a31e-fc08ba20fd76) used a mechanically rotating, DC-fed transmitter to produce low-frequency excitation. This differs from rotating a receiver under a stationary kHz transmitter. It is relevant rotating-coil prior art, not an exact match to that particular arrangement.
+
+## Instruments and research prototypes
+
+- [Geometrics MetalMapper 2x2](https://www.geometrics.com/product/metalmapper-2x2/) and its [operations manual](https://www.geometrics.com/wp-content/uploads/2024/04/860-00158-01_B-MM2X2-Manual-Ver-2.2.pdf): multiple transmitter/receiver channels, dynamic and cued surveys, positioning and orientation metadata. A practical comparator for acquisition and calibration.
+- [Man-Portable Vector sensor field demonstration](https://serdp-estcp.mil/projects/details/13a9e019-4799-418d-b2e3-b74faabaa11f): portable vector EMI with positioning and field evaluation. Mobile EMI is established practice.
+- [Geophex GEM-2 manual](https://geophex.com/wp-content/uploads/2023/11/GEM-2-Operators-Manual.pdf): multifrequency EMI and practical acquisition tradeoffs. Frequency diversity is an established instrument capability.
+- [Robot-assisted soil apparent conductivity measurements, 2023](https://arxiv.org/abs/2309.05128): a mobile robot carrying an adjustable EMI sensor. Relevant to the carrier and sensor placement, not evidence of arbitrary metal-shape reconstruction.
+
+Performance numbers from these systems apply to their respective targets, apparatus and conditions. They are not specifications for Pose-Resolved EM Scanner / Rover.
+
+## Patent publications and claim boundaries
+
+The following are technical comparisons of published documents. A family is treated as one line of development. Published application claims, granted claims and broader descriptions must be distinguished; their numbering and scope can differ. No conclusion on enforceability, infringement or freedom to operate is made here.
+
+| Patent family / original publication | Relevant disclosure | Important boundary |
+|---|---|---|
+| **Philips [US8125220B2](https://patents.google.com/patent/US8125220B2/en)**, family including WO2007072343A2 and US20080258717A1; first WO publication 2007 | Independent motion/rotation of generator and sensor coils for additional measurement information and reconstruction; the description also discusses multiple frequencies and spiral scanning | Granted US claim 1 includes an asymmetric arrangement. Claims 3–5 cover independent motion and rotation subject to their dependencies. This is not a finding that every movable-coil device satisfies those claims |
+| **NPL [EP4305414A1](https://patents.google.com/patent/EP4305414A1/en)** / [US20240036003A1](https://patents.google.com/patent/US20240036003A1/en), family including WO2022214834A1, published 2022 | Material classification from an orthogonal secondary-field component; spatial, angular and frequency scans; description of autonomously updated measurement sequences | EP claim 16 addresses ML control of measurement features. US claim 16 is different. An atomic magnetometer is not required by independent claim 1. Contemplated autonomous sequencing is not itself an experimental result |
+| **[US20150285612A1](https://patents.google.com/patent/US20150285612A1/en)**, family including US9983326B2 | Electromagnetic surveying with a separate tracking transmitter and relative RX position/orientation; A1 claim 9 permits free RX rotation and translation | A particular tracking architecture; not every pose-tracking method or the entire adaptive workflow |
+| **[WO2018017326A1](https://patents.google.com/patent/WO2018017326A1/en)** | Handheld induction tomography with optical pose tracking, coil-center calibration and electromagnetic-property mapping | Specific optical and single-coil arrangement; not independently moving TX/RX |
+| **[WO2021016649A1](https://patents.google.com/patent/WO2021016649A1/en)**, family including [US12025766B2](https://patents.google.com/patent/US12025766B2/en) | Position-associated metal-detector signals, camera/IMU geometry, multi-position processing and display/AR disclosure | Independent claims contain additional limitations, including audio output; disclosure is broader than any isolated claim |
+| **[WO2016124964A1](https://patents.google.com/patent/WO2016124964A1/en)** | Treatment of rotational interference in geophysical EM acquisition, including the primary excitation | Correcting motion noise does not imply that all useful geometry information is discarded |
+| **[CN110007354B](https://patents.google.com/patent/CN110007354B/en)** and its A publication | Suspended UAV-TEM coil with attitude/position-related sensing and a particular suspension | Specific mechanical and sensor arrangement; the English text is a translation |
+| **[US6100696A](https://patents.google.com/patent/US6100696A/en)** | Directional induction logging with rotation and orientation sensing | Borehole context; relevant to broad rotation-plus-orientation claims |
+| **[US11982783B2](https://patents.google.com/patent/US11982783B2/en)** | Optical motion association of metal-detector responses and processing/display of spatial response | A particular handheld arrangement; displayed response shape is not proof of exact three-dimensional target geometry |
+
+## Scope of the proposed contribution
+
+The project describes an intended integration of known EMI acquisition, measured geometry, uncertainty treatment and adaptive selection. Broad claims to the first use of these mechanisms, useful independent coil movement, or adaptive inductive scanning are not supported. No specific original technical mechanism has yet been established in the available project description. Any narrower technical contribution or measured advantage would have to be established for a concrete implementation against the closest relevant baselines, including existing adaptive EMI methods. Improvement over a nonadaptive survey alone would not establish an advance over this prior art.
+
+A collection of overlapping sources does not automatically establish the legal outcome for every possible patent claim. Equally, not finding one document with every proposed detail does not establish novelty of their combination.
