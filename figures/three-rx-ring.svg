@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+<title id="title">Provisional three-RX rotating carrier inside a fixed TX loop</title>
+<desc id="desc">Top view. TX diameter 50 cm. Three RX centers on a 30 cm path, spaced 120 degrees. Each RX diameter 8 cm. Dimensions are provisional; receiver inclinations are not selected.</desc>
+<rect width="980" height="560" fill="#f8fafc"/>
+<g font-family="Arial, sans-serif" fill="#14243b">
+<text x="32" y="38" font-size="25" font-weight="bold">Three RX on one rotating carrier</text>
+<text x="32" y="65" font-size="16">Packaging sketch only • top view • no validated depth or performance</text>
+<circle cx="270" cy="306" r="205" fill="none" stroke="#2463ad" stroke-width="10"/>
+<circle cx="270" cy="306" r="123" fill="none" stroke="#8795a9" stroke-width="4" stroke-dasharray="8 7"/>
+<path d="M270 306 L393 306 M270 306 L208.5 199.48 M270 306 L208.5 412.52" stroke="#a1acb9" stroke-width="6"/>
+<g fill="#dcf5ee" stroke="#137865" stroke-width="5">
+<circle cx="393" cy="306" r="32.8"/><circle cx="208.5" cy="199.48" r="32.8"/><circle cx="208.5" cy="412.52" r="32.8"/>
+</g>
+<g font-size="17" text-anchor="middle"><text x="393" y="312">RX1</text><text x="208.5" y="205.5">RX2</text><text x="208.5" y="418.5">RX3</text></g>
+<circle cx="270" cy="306" r="7" fill="#14243b"/>
+<path d="M310 269 A55 55 0 0 1 310 343" fill="none" stroke="#d38b21" stroke-width="4"/>
+<path d="M310 343 L313 329 M310 343 L324 340" stroke="#d38b21" stroke-width="4"/>
+<g font-size="20">
+<text x="530" y="145" fill="#2463ad">Fixed TX: Ø 50 cm</text>
+<text x="530" y="193" fill="#137865">3 separate RX: Ø 8 cm each</text>
+<text x="530" y="241">RX center path: Ø 30 cm</text>
+<text x="530" y="289">Center spacing: 120°</text>
+<text x="530" y="337">One carrier drive</text>
+</g>
+<g font-size="16" fill="#465771">
+<text x="530" y="391">Rotate → settle → read three channels</text>
+<text x="530" y="422">Dashed path is not an electrical coil.</text>
+<text x="530" y="453">RX inclinations remain to be selected.</text>
+<text x="530" y="484">Three RX are not a triaxial receiver.</text>
+</g>
+<text x="32" y="541" font-size="13" fill="#465771">Pose-Resolved EM Scanner / Rover • Philipp Dik • Concept draft, 22 September 2026</text>
+</g></svg>
