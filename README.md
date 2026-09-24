@@ -4,6 +4,8 @@
 **Status: research concept; a working geometry is proposed, not validated hardware.**  
 **Evidence-grounded concept update: 24 September 2026. No demonstrated overall novelty or performance advantage.**
 
+Documentation version **2026.09.25**: [audit status](docs/AUDIT_STATUS.md), [change record](CHANGELOG.md) and [citation metadata](CITATION.cff). This version records a research concept and its evidence limits.
+
 Pose-Resolved EM Scanner / Rover proposes an electromagnetic induction (EMI) scanning workflow in which measurements are interpreted using the actual positions and orientations of the transmitting (TX) and receiving (RX) coils. Measurements from different configurations are combined to estimate target location and electromagnetic response, with uncertainty. A subsequent measurement may be selected from the current estimate to improve information about an unresolved region or target.
 
 The core is joint interpretation of registered measurements and a calibrated reference library, not rotation alone. The present working embodiment is a mobile or stationary platform with a large TX loop and three separately read RX coils on one rotating carrier. The carrier moves independently of the TX. This is a candidate implementation, not an established optimum. The physical sensing mechanisms and several constituent methods have substantial [prior art](PRIOR_ART.md).

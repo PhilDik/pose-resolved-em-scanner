@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: >-
+  Please cite the preferred report citation below when referring to this
+  research concept. This repository documents a proposed design and its
+  evidence limits; it does not provide a validated instrument or software implementation.
+title: "Pose-Resolved EM Scanner / Rover: Research Concept and Technical Audit"
+authors:
+  - family-names: Dik
+    given-names: Philipp
+version: "2026.09.25"
+date-released: "2026-09-25"
+url: "https://github.com/PhilDik/pose-resolved-em-scanner"
+abstract: >-
+  Research concept for joint interpretation of electromagnetic induction
+  measurements using calibrated transmitter and receiver poses. The proposed
+  embodiment uses one large transmitter loop and three separately read receiver
+  coils on a common rotating carrier. Repeated registered measurements update
+  the scene map while any pretrained model remains fixed. The documentation
+  reviews prior art, supporting experiments, identifiability limits and future
+  validation needs. Overall novelty and a measured performance advantage have
+  not been established.
+keywords:
+  - electromagnetic induction
+  - pose-resolved measurements
+  - inverse problems
+  - research concept
+preferred-citation:
+  type: report
+  title: "Pose-Resolved EM Scanner / Rover: Research Concept and Technical Audit"
+  authors:
+    - family-names: Dik
+      given-names: Philipp
+  year: 2026
+  month: 9
+  version: "2026.09.25"
+  url: "https://github.com/PhilDik/pose-resolved-em-scanner/tree/v2026.09.25"
