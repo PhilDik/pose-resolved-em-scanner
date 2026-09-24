@@ -2,6 +2,12 @@
 
 This document separates structural results from experimental claims. No completed hardware prototype, measured depth specification or validated end-to-end probability volume is established by this package.
 
+## Published physical evidence
+
+The project need not repeat established experiments in order to document a plausible design. The [experimental basis](EXPERIMENTAL_BASIS.md) records published physical evidence for tracked induction imaging, multiaxis reference-based interpretation and sequential use of additional measurements. This is evidence for specified components and workflows under the original conditions; it is not validation of this project's complete apparatus or a source of transferable performance numbers.
+
+In particular, Song et al.'s real MPV examples in section 4.2 are indoor experiments. ALLTEM reports separate blind field evaluations. These settings must remain distinct. Patents and the local synthetic calculations do not substitute for either kind of physical experiment.
+
 ## Established within the stated model
 
 For a compact linear target at a known position and a fixed TX excitation vector, measurements have the form `y_i = a_i^T M_H h`. Regardless of how many RX positions are used, the unknown tensor enters through one three-component vector `M_H h`. The operator therefore has rank at most three with respect to six unrestricted symmetric tensor components. Frequency diversity alone does not supply missing directions if each frequency has its own otherwise unconstrained tensor. Additional TX positions or orientations can supply independent excitations, subject to conditioning. See [Smith & Morrison](https://doi.org/10.1109/TGRS.2005.846869).
@@ -9,6 +15,8 @@ For a compact linear target at a known position and a fixed TX excitation vector
 For identical RX coils that are rotational copies, let their full poses be `g_k(theta) = g_0(theta + 2 pi k/3)`. The union over `k = 0,1,2` and `0 <= theta < 2 pi/3` equals the single-RX full-turn pose set. For discrete sampling, choose matching grids and omit duplicate endpoints. This identity requires a fixed TX, static scene and equivalent calibrated channels. The three-channel arrangement can collect the poses with less carrier travel; it does not triple distinct geometries.
 
 Spinning an ideal circular coil about its own normal at a fixed center does not change its magnetic geometry. Moving an off-center coil around a carrier changes its position even when its normal stays vertical. These are different operations.
+
+For an isotropic compact target on the common axis of a circular TX and a horizontal RX ring at one station and frequency, the ideal response is independent of carrier azimuth and has the form `y = alpha K(d)`. An unknown scalar response `alpha` can trade off against depth `d` within the allowed target class. Additional angular samples do not resolve that ambiguity by themselves. This is a restricted structural counterexample, not a prohibition on localization using additional stations, excitation geometries or justified constraints.
 
 ## Completed exploratory checks and their limits
 
@@ -31,6 +39,8 @@ Each method receives the same accumulated data and may refine its map. The pretr
 Measure position/depth error, false detections and uncertainty calibration against independent truth; evaluate response-class performance separately if it is included. More confident or visually sharper maps are not automatically more accurate. Retain ambiguous, empty and out-of-family scenes. Report computation time and, for acquisition-efficiency claims, total movement, settling, acquisition time and energy.
 
 No experiment comparing complete learned and physical map refinement under this protocol has yet been completed. The exploratory Gaussian-prior result is a narrower test and cannot settle this broader question.
+
+The [future comparison protocol](BENCHMARK.md) specifies a bounded two-acquisition/two-processing experiment, including failures, shared errors, equal resource limits and an inconclusive outcome. It is a prospective test, not a prerequisite for completing this documentation or a report of measurements already taken.
 
 ## Required work before performance claims
 

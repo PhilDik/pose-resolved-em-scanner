@@ -2,11 +2,28 @@
 
 **Author: Philipp Dik**  
 **Status: research concept; a working geometry is proposed, not validated hardware.**  
-**Consolidated research concept: 23 September 2026. No demonstrated overall novelty or performance advantage.**
+**Evidence-grounded concept update: 24 September 2026. No demonstrated overall novelty or performance advantage.**
 
 Pose-Resolved EM Scanner / Rover proposes an electromagnetic induction (EMI) scanning workflow in which measurements are interpreted using the actual positions and orientations of the transmitting (TX) and receiving (RX) coils. Measurements from different configurations are combined to estimate target location and electromagnetic response, with uncertainty. A subsequent measurement may be selected from the current estimate to improve information about an unresolved region or target.
 
 The core is joint interpretation of registered measurements and a calibrated reference library, not rotation alone. The present working embodiment is a mobile or stationary platform with a large TX loop and three separately read RX coils on one rotating carrier. The carrier moves independently of the TX. This is a candidate implementation, not an established optimum. The physical sensing mechanisms and several constituent methods have substantial [prior art](PRIOR_ART.md).
+
+## What the existing experiments support
+
+Published measurements provide a practical basis for developing this concept. ALLTEM combined multiaxis EMI, calibration-trained interpretation and physical inversion, with separate blind field evaluations. Song et al. demonstrated sequential placement and joint interpretation of new MPV measurements in controlled indoor experiments. Feldkamp and Quirk demonstrated synchronized optical coil tracking and three-dimensional reconstruction of laboratory conductivity phantoms. These are physical demonstrations of relevant parts of the workflow, not measurements made with this project's head.
+
+The [experimental basis](docs/EXPERIMENTAL_BASIS.md) identifies the actual experiment, what can be reused and the boundary of each inference. It also retains negative findings, including tracking problems and reconstruction ambiguity. Published results justify an evidence-grounded engineering specification; they do not transfer detection depth, accuracy, speed or a complete-system validation to the proposed three-RX geometry.
+
+This repository is a concept and design record. It does not contain a completed instrument, a trained reconstruction implementation or the cited authors' raw experimental datasets. A new project-specific experiment is needed for performance claims, but is not a prerequisite for documenting the design now.
+
+| Read next | Purpose |
+|---|---|
+| [Experimental basis](docs/EXPERIMENTAL_BASIS.md) | Physical measurements supporting the design and limits of transfer |
+| [Design specification](docs/DESIGN_SPEC.md) | System interfaces, fixed-model map updates and unresolved implementation parameters |
+| [Reconstruction](docs/RECONSTRUCTION.md) | Proposed inference and the meaning of the spatial output |
+| [Validation status](docs/VALIDATION.md) | Structural results, local numerical checks and remaining claims |
+| [Future comparison](docs/BENCHMARK.md) | A bounded test if apparatus or suitable recorded measurements become available |
+| [Prior art](PRIOR_ART.md) | Scientific and patent overlaps, including established adaptive methods |
 
 ## Research hypothesis: improving the map as measurements accumulate
 
@@ -35,6 +52,8 @@ A substantial practical benefit is a research hypothesis, not an established res
 These are an illustrative layout, not optimized dimensions or a depth specification. The ideal planar envelope has radius 15 + 4 = 19 cm inside a TX radius of 25 cm; the nominal radial gap is 6 cm before accounting for mechanics and wiring. Different inclinations require a revised clearance check. A 50-cm TX is already used in the [MPV system](https://serdp-estcp.mil/projects/details/3697eda6-34ca-411d-8af4-b1e5d1e36862); this example establishes neither a unique size nor transferable performance.
 
 A single moving RX, RX tilt, and whole-head tilt remain comparison geometries. This draft does not designate them as inferior or require three RX in every possible implementation. An upper shield remains an untested option: conductive shielding can change excitation, coupling and sensitivity, and cannot be presumed to improve the signal.
+
+The carrier may stay at a station, turn with the platform, or move between stations. Turning in place does not imply that every coil center stays fixed. Coils incorporated into wheels remain an optional mechanical idea, not a requirement or an experimentally supported advantage of this design.
 
 See [Reconstruction](docs/RECONSTRUCTION.md) for the proposed processing sequence and [Validation](docs/VALIDATION.md) for the boundary between calculations and untested claims.
 

@@ -2,6 +2,8 @@
 
 This is a concrete formulation of the concept, not an implemented or validated end-to-end algorithm. Standard statistical operations below are not claimed as inventions. The hardware candidate and its scope are specified in the [README](../README.md).
 
+Published physical precedents are mapped in [Experimental basis](EXPERIMENTAL_BASIS.md); implementation interfaces are specified in [Design specification](DESIGN_SPEC.md). No trained parameters, executable reconstructor or raw experimental dataset are supplied by these documents.
+
 ## Measurement and reference preparation
 
 For each sample, store a unique ID, station/pass and channel IDs, time and acquisition window, excitation waveform or frequency, measured TX current (including phase where needed), actual TX and RX centers and normals, carrier angle, calibrated transfer functions, background reference, and tracking/calibration uncertainty. Retain provenance and version identifiers.
